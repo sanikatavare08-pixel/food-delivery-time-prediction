@@ -12,7 +12,7 @@ st.title("🚚 Food Delivery Time Prediction")
 # User Inputs
 order_id = st.number_input("Order ID", min_value=1, step=1)
 distance = st.number_input("Distance (km)", min_value=0.0, format="%.2f")
-weather = st.selectbox("Weather", ["Sunny", "Cloudy", "Rainy", "Foggy"])
+weather = st.selectbox("Weather", ["Clear", "Cloudy", "Rainy", "Foggy"])
 traffic = st.selectbox("Traffic Level", ["Low", "Medium", "High"])
 time_of_day = st.selectbox("Time of Day", ["Morning", "Afternoon", "Evening", "Night"])
 vehicle = st.selectbox("Vehicle Type", ["Bike", "Scooter", "Car"])
