@@ -44,16 +44,17 @@ vehicle_map = {
 }
 
 if st.button("Predict Delivery Time"):
-    features = np.array([[
-        order_id,
-        distance,
-        weather_map[weather],
-        traffic_map[traffic],
-        time_map[time_of_day],
-        vehicle_map[vehicle],
-        prep_time,
-        experience
-    ]])
+    features = pd.DataFrame({
+    "Order_ID": [order_id],
+    "Distance_km": [distance],
+    "Weather": [weather],
+    "Traffic_Level": [traffic],
+    "Time_of_Day": [time_of_day],
+    "Vehicle_Type": [vehicle],
+    "Preparation_Time_min": [prep_time],
+    "Courier_Experience_yrs": [experience]
+})
+    
 
     prediction = model.predict(features)
 
