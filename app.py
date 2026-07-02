@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load trained model
-model = pickle.load(open("model.pkl", "rb"))
+model = pickle.load(open("pipe.pkl", "rb"))
 
 st.title("🚚 Food Delivery Time Prediction")
 
@@ -58,4 +58,3 @@ if st.button("Predict Delivery Time"):
     prediction = model.predict(features)
 
     st.success(f"Estimated Delivery Time: {prediction[0]:.2f} minutes")
-    
