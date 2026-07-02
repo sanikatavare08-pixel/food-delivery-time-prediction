@@ -32,9 +32,9 @@ if st.button("Predict Delivery Time"):
         "Courier_Experience_yrs": [experience]
     })
 
-   try:
-    prediction = model.predict(features)
-    st.write(prediction)   # Check what the model returns
-    st.success(f"Estimated Delivery Time: {prediction[0][0]:.2f} minutes")
-except Exception as e:
-    st.error(e)
+    try:
+        prediction = model.predict(features)
+        st.write(prediction)
+        st.success(f"Estimated Delivery Time: {prediction[0][0]:.2f} minutes")
+    except Exception as e:
+        st.error(e)
